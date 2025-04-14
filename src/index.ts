@@ -17,7 +17,7 @@
  * @packageDocumentation
  */
 
-export * from './decorator-factory';
-export * from './inspector';
-export * from './reflect';
-export * from './types';
+export * from './decorator-factory.js';
+export * from './inspector.js';
+export * from './reflect.js';
+export * from './types.js';

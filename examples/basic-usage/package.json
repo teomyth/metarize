@@ -1,0 +1,29 @@
+{
+  "name": "metarize-basic-example",
+  "version": "1.0.0",
+  "description": "Basic example demonstrating the usage of metarize library",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsc --watch"
+  },
+  "keywords": [
+    "metarize",
+    "example",
+    "decorators",
+    "metadata",
+    "typescript"
+  ],
+  "author": "Metarize Contributors",
+  "license": "MIT",
+  "dependencies": {
+    "metarize": "^1.0.2",
+    "reflect-metadata": "^0.2.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.0.0"
+  }
+}

@@ -1,7 +1,7 @@
-import debugModule from './debug';
-import { Reflector } from './reflect';
-import { DecoratorType, MetadataKey, MetadataMap } from './types';
-import { cloneDeep } from './utils';
+import debugModule from './debug.js';
+import { Reflector } from './reflect.js';
+import { DecoratorType, MetadataKey, MetadataMap } from './types.js';
+import { cloneDeep } from './utils.js';
 
 const debug = debugModule('metarize:metadata:decorator');
 

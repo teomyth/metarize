@@ -1,7 +1,7 @@
-import debugModule from './debug';
-import { DecoratorFactory } from './decorator-factory';
-import { NamespacedReflect, Reflector } from './reflect';
-import { DecoratorType, DesignTimeMethodMetadata, MetadataKey, MetadataMap } from './types';
+import debugModule from './debug.js';
+import { DecoratorFactory } from './decorator-factory.js';
+import { NamespacedReflect, Reflector } from './reflect.js';
+import { DecoratorType, DesignTimeMethodMetadata, MetadataKey, MetadataMap } from './types.js';
 
 const debug = debugModule('metarize:metadata:inspector');
 
