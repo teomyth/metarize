@@ -1,0 +1,15 @@
+# These owners will be the default owners for everything in the repo
+* @GITHUB_USERNAME
+
+# Package files
+package.json @GITHUB_USERNAME
+pnpm-lock.yaml @GITHUB_USERNAME
+
+# Source code
+/src/ @GITHUB_USERNAME
+
+# Tests
+/tests/ @GITHUB_USERNAME
+
+# GitHub specific files
+/.github/ @GITHUB_USERNAME

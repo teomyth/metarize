@@ -1,0 +1,98 @@
+{
+  "name": "metarize",
+  "version": "1.0.0",
+  "description": "A lightweight, ESM-compatible TypeScript metadata library for creating and inspecting decorators with zero dependencies",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "pnpm run test && pnpm run build",
+    "prerelease": "pnpm run test && pnpm run build",
+    "release": "release-it",
+    "release:patch": "release-it patch",
+    "release:minor": "release-it minor",
+    "release:major": "release-it major",
+    "prepare": "husky",
+    "lint-staged": "lint-staged"
+  },
+  "keywords": [
+    "typescript",
+    "decorators",
+    "metadata",
+    "reflection",
+    "esm",
+    "dependency-injection",
+    "reflect-metadata",
+    "annotations",
+    "decorator-factory",
+    "loopback",
+    "metaprogramming",
+    "type-safety",
+    "zero-dependencies",
+    "framework-development",
+    "validation",
+    "api-documentation",
+    "typescript-decorators",
+    "metadata-reflection",
+    "lightweight",
+    "browser-compatible"
+  ],
+  "author": "teomyth <teomyth@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/teomyth/metarize.git"
+  },
+  "homepage": "https://github.com/teomyth/metarize",
+  "bugs": {
+    "url": "https://github.com/teomyth/metarize/issues"
+  },
+  "packageManager": "pnpm@10.8.0",
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
+    "@eslint/js": "^9.24.0",
+    "@release-it/conventional-changelog": "^10.0.0",
+    "@types/node": "^22.14.1",
+    "@vitest/coverage-v8": "^3.1.1",
+    "conventional-changelog-angular": "^8.0.0",
+    "eslint": "^9.24.0",
+    "eslint-config-prettier": "^10.1.2",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-unused-imports": "^4.1.4",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.1",
+    "prettier": "^3.5.3",
+    "release-it": "^18.1.2",
+    "standard-version": "^9.5.0",
+    "ts-node": "^10.9.2",
+    "turbo": "^2.5.0",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.1"
+  },
+  "dependencies": {
+    "reflect-metadata": "^0.2.2"
+  },
+  "files": [
+    "README.md",
+    "dist",
+    "src"
+  ],
+  "lint-staged": {
+    "*.{js,ts}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ]
+  }
+}
