@@ -1,6 +1,6 @@
 {
   "name": "metarize",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A lightweight, ESM-compatible TypeScript metadata library for creating and inspecting decorators with zero dependencies",
   "type": "module",
   "main": "dist/index.js",
@@ -17,7 +17,6 @@
     "fix": "biome check --write --unsafe .",
     "fix:all": "pnpm fix && pnpm build",
     "validate": "pnpm lint && pnpm test && pnpm build",
-
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
@@ -26,7 +25,6 @@
     "release:minor": "release-it minor",
     "release:major": "release-it major",
     "release:dry-run": "release-it --dry-run",
-
     "prepublishOnly": "pnpm test && pnpm build",
     "prerelease": "pnpm test && pnpm build",
     "prepare": "husky",
