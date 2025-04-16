@@ -16,10 +16,5 @@
     "after:bump": "pnpm build",
     "after:release": "echo Successfully released ${name} v${version} to GitHub."
   },
-  "plugins": {
-    "@release-it/conventional-changelog": {
-      "preset": "angular",
-      "infile": "CHANGELOG.md"
-    }
-  }
+  "plugins": {}
 }
