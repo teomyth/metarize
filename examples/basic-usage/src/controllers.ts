@@ -2,7 +2,7 @@
  * This file demonstrates how to use decorators on controller classes
  */
 import { apiEndpoint, apiMethod, apiParam } from './decorators.js';
-import { User, CreateUserRequest } from './models.js';
+import { CreateUserRequest, User } from './models.js';
 
 @apiEndpoint({
   basePath: '/users',

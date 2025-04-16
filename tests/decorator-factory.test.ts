@@ -1,4 +1,4 @@
-import { describe, it, expect } from 'vitest';
+import { describe, expect, it } from 'vitest';
 import {
   ClassDecoratorFactory,
   DecoratorFactory,
@@ -78,7 +78,7 @@ describe('DecoratorFactory', () => {
       }
 
       class TestClass {
-        testMethod(@parameterDecorator({ name: 'test-parameter' }) param: string) {}
+        testMethod(@parameterDecorator({ name: 'test-parameter' }) _param: string) {}
       }
 
       const meta = Reflector.getMetadata('test:parameter', TestClass.prototype);

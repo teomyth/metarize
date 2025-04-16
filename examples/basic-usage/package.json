@@ -9,18 +9,11 @@
     "start": "node dist/index.js",
     "dev": "tsc --watch"
   },
-  "keywords": [
-    "metarize",
-    "example",
-    "decorators",
-    "metadata",
-    "typescript"
-  ],
+  "keywords": ["metarize", "example", "decorators", "metadata", "typescript"],
   "author": "Metarize Contributors",
   "license": "MIT",
   "dependencies": {
-    "metarize": "^1.0.2",
-    "reflect-metadata": "^0.2.2"
+    "metarize": "^1.0.2"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",

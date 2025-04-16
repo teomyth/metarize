@@ -222,10 +222,10 @@ export class DecoratorFactory<
    * @param descriptorOrIndex - Optional parameter index or method descriptor
    */
   protected mergeWithInherited(
-    inheritedMetadata: M,
-    target: Object,
-    member?: string | symbol,
-    descriptorOrIndex?: TypedPropertyDescriptor<any> | number
+    _inheritedMetadata: M,
+    _target: Object,
+    _member?: string | symbol,
+    _descriptorOrIndex?: TypedPropertyDescriptor<any> | number
   ): M {
     throw new Error(`mergeWithInherited() is not implemented for ${this.decoratorName}`);
   }
@@ -244,10 +244,10 @@ export class DecoratorFactory<
    * @param descriptorOrIndex - Optional parameter index or method descriptor
    */
   protected mergeWithOwn(
-    ownMetadata: M,
-    target: Object,
-    member?: string | symbol,
-    descriptorOrIndex?: TypedPropertyDescriptor<any> | number
+    _ownMetadata: M,
+    _target: Object,
+    _member?: string | symbol,
+    _descriptorOrIndex?: TypedPropertyDescriptor<any> | number
   ): M {
     throw new Error(`mergeWithOwn() is not implemented for ${this.decoratorName}`);
   }
@@ -332,8 +332,8 @@ export class ClassDecoratorFactory<T> extends DecoratorFactory<T, T, ClassDecora
   protected mergeWithInherited(
     inheritedMetadata: T,
     target: Object,
-    member?: string,
-    descriptorOrIndex?: TypedPropertyDescriptor<any> | number
+    _member?: string,
+    _descriptorOrIndex?: TypedPropertyDescriptor<any> | number
   ) {
     return this.withTarget(<T>this.inherit(inheritedMetadata), target);
   }
@@ -381,7 +381,7 @@ export class PropertyDecoratorFactory<T> extends DecoratorFactory<
     inheritedMetadata: MetadataMap<T>,
     target: Object,
     propertyName?: string,
-    descriptorOrIndex?: TypedPropertyDescriptor<any> | number
+    _descriptorOrIndex?: TypedPropertyDescriptor<any> | number
   ) {
     inheritedMetadata = inheritedMetadata || {};
     const propertyMeta: T = this.withTarget(
@@ -437,7 +437,7 @@ export class MethodDecoratorFactory<T> extends DecoratorFactory<
     inheritedMetadata: MetadataMap<T>,
     target: Object,
     methodName?: string,
-    methodDescriptor?: TypedPropertyDescriptor<any> | number
+    _methodDescriptor?: TypedPropertyDescriptor<any> | number
   ) {
     inheritedMetadata = inheritedMetadata || {};
     const methodMeta = this.withTarget(<T>this.inherit(inheritedMetadata[methodName!]), target);
@@ -703,7 +703,7 @@ export class MethodMultiDecoratorFactory<T> extends MethodDecoratorFactory<T[]> 
     ownMetadata: MetadataMap<T[]>,
     target: Object,
     methodName?: string,
-    methodDescriptor?: TypedPropertyDescriptor<any> | number
+    _methodDescriptor?: TypedPropertyDescriptor<any> | number
   ) {
     ownMetadata = ownMetadata || {};
     ownMetadata[methodName!] = this._mergeArray(

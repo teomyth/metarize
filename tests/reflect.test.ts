@@ -1,4 +1,4 @@
-import { describe, it, expect, afterEach } from 'vitest';
+import { afterEach, describe, expect, it } from 'vitest';
 import 'reflect-metadata';
 import { NamespacedReflect, Reflector } from '../src';
 

@@ -4,8 +4,8 @@
 import {
   ClassDecoratorFactory,
   MethodDecoratorFactory,
-  PropertyDecoratorFactory,
   ParameterDecoratorFactory,
+  PropertyDecoratorFactory,
 } from 'metarize';
 
 // Define metadata keys

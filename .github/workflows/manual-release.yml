@@ -59,9 +59,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
 
-      - name: Lint check
+      - name: Check
         if: ${{ github.event.inputs.skip_ci != 'true' }}
-        run: pnpm lint
+        run: pnpm check
 
       - name: Run tests
         if: ${{ github.event.inputs.skip_ci != 'true' }}

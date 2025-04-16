@@ -1,5 +1,5 @@
-import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import createDebug, { Debugger } from '../src/debug';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
+import createDebug from '../src/debug';
 
 describe('debug', () => {
   let originalConsoleLog: typeof console.log;

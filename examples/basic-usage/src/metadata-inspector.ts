@@ -3,8 +3,6 @@
  */
 import { MetadataInspector } from 'metarize';
 import { API_ENDPOINT, API_METHOD, API_PARAM, API_PROPERTY } from './decorators.js';
-import { UserController } from './controllers.js';
-import { User, CreateUserRequest } from './models.js';
 
 /**
  * Utility to inspect and print API metadata

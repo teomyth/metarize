@@ -513,6 +513,9 @@ cd metarize
 # Install dependencies
 pnpm install
 
+# Development mode (watch for changes)
+pnpm dev
+
 # Build the library
 pnpm build
 
@@ -522,19 +525,30 @@ pnpm test
 # Run tests with coverage
 pnpm test:coverage
 
-# Run linting
-pnpm lint
-
 # Format code
 pnpm format
+
+# Lint code
+pnpm lint
+
+# Check and fix code (safe fixes)
+pnpm check
+
+# Fix code issues (including unsafe fixes)
+pnpm fix
+
+# Fix all issues and run type checking
+pnpm fix:all
+
+# Validate code (lint + test + build)
+pnpm validate
 ```
 
 The project uses:
 
 - **TypeScript** for type-safe code
 - **Vitest** for testing
-- **ESLint** for code quality
-- **Prettier** for code formatting
+- **Biome** for code formatting, linting and import sorting
 - **pnpm** for package management
 
 ## Best Practices

@@ -3,8 +3,8 @@
  */
 import 'reflect-metadata';
 import { UserController } from './controllers.js';
-import { User, CreateUserRequest } from './models.js';
 import { ApiMetadataInspector } from './metadata-inspector.js';
+import { CreateUserRequest, User } from './models.js';
 
 // Print banner
 console.log('=================================================');
