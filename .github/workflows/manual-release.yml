@@ -105,7 +105,7 @@ jobs:
       - name: Set Release Command
         id: set-command
         run: |
-          RELEASE_CMD="pnpm exec release-it"
+          RELEASE_CMD="pnpm release"
 
           # Handle version type or specific version
           if [ "${{ github.event.inputs.specific_version }}" != "" ]; then
