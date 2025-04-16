@@ -37,8 +37,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
 
-      - name: Run CI checks
-        run: pnpm ci
+      - name: Run validation checks
+        run: pnpm validate
 
       - name: Test Coverage
         run: pnpm test:coverage

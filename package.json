@@ -17,7 +17,7 @@
     "fix": "biome check --write --unsafe .",
     "fix:all": "pnpm fix && pnpm build",
     "validate": "pnpm lint && pnpm test && pnpm build",
-    "ci": "pnpm validate",
+
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
