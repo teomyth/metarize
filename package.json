@@ -25,6 +25,7 @@
     "release:patch": "release-it patch",
     "release:minor": "release-it minor",
     "release:major": "release-it major",
+    "release:dry-run": "release-it --dry-run",
 
     "prepublishOnly": "pnpm test && pnpm build",
     "prerelease": "pnpm test && pnpm build",
