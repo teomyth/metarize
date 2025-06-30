@@ -1,6 +1,6 @@
 {
   "name": "metarize",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A lightweight, ESM-compatible TypeScript metadata library for creating and inspecting decorators with zero dependencies",
   "type": "module",
   "main": "dist/index.js",
