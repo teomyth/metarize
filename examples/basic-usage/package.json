@@ -9,7 +9,13 @@
     "start": "node dist/index.js",
     "dev": "tsc --watch"
   },
-  "keywords": ["metarize", "example", "decorators", "metadata", "typescript"],
+  "keywords": [
+    "metarize",
+    "example",
+    "decorators",
+    "metadata",
+    "typescript"
+  ],
   "author": "Metarize Contributors",
   "license": "MIT",
   "dependencies": {

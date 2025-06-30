@@ -108,7 +108,7 @@ export function cloneDeep<V>(val: Readonly<V>, refs = new WeakMap<object, any>()
   // Handle plain objects
   const newObj: Record<string, any> = {};
   for (const key in val) {
-    if (Object.prototype.hasOwnProperty.call(val, key)) {
+    if (Object.hasOwn(val, key)) {
       newObj[key] = cloneDeep((val as Record<string, any>)[key], refs);
     }
   }

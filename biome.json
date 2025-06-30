@@ -1,7 +1,7 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.0.6/schema.json",
   "vcs": { "enabled": false, "clientKind": "git", "useIgnoreFile": false },
-  "files": { "ignoreUnknown": false, "ignore": ["temp/**", "coverage/**"] },
+  "files": { "ignoreUnknown": false, "includes": ["**", "!**/temp/**", "!**/coverage/**"] },
   "formatter": {
     "enabled": true,
     "useEditorconfig": true,
@@ -12,44 +12,43 @@
     "lineWidth": 100,
     "attributePosition": "auto",
     "bracketSpacing": true,
-    "ignore": [
-      "**/node_modules/",
-      "**/.pnpm-store/",
-      "**/dist/",
-      "**/build/",
-      "**/out/",
-      "**/.next/",
-      "**/.turbo/",
-      "**/coverage/",
-      "**/logs/",
-      "**/*.log",
-      "**/npm-debug.log*",
-      "**/yarn-debug.log*",
-      "**/yarn-error.log*",
-      "**/pnpm-debug.log*",
-      "**/.env",
-      "**/.env.*",
-      "**/.idea/",
-      "**/.vscode/",
-      "**/*.suo",
-      "**/*.ntvs*",
-      "**/*.njsproj",
-      "**/*.sln",
-      "**/*.sw?",
-      "**/.DS_Store",
-      "**/Thumbs.db"
+    "includes": [
+      "**",
+      "!**/node_modules/",
+      "!**/.pnpm-store/",
+      "!**/dist/",
+      "!**/build/",
+      "!**/out/",
+      "!**/.next/",
+      "!**/.turbo/",
+      "!**/coverage/",
+      "!**/logs/",
+      "!**/*.log",
+      "!**/npm-debug.log*",
+      "!**/yarn-debug.log*",
+      "!**/yarn-error.log*",
+      "!**/pnpm-debug.log*",
+      "!**/.env",
+      "!**/.env.*",
+      "!**/.idea/",
+      "!**/.vscode/",
+      "!**/*.suo",
+      "!**/*.ntvs*",
+      "!**/*.njsproj",
+      "!**/*.sln",
+      "!**/.DS_Store",
+      "!**/Thumbs.db"
     ]
   },
-  "organizeImports": { "enabled": true },
+  "assist": { "actions": { "source": { "organizeImports": "on" } } },
   "linter": {
     "enabled": true,
     "rules": {
       "recommended": false,
       "complexity": {
         "noExtraBooleanCast": "error",
-        "noMultipleSpacesInRegularExpressionLiterals": "error",
         "noUselessCatch": "error",
-        "noWith": "error"
+        "noAdjacentSpacesInRegex": "error"
       },
       "correctness": {
         "noConstAssign": "error",
@@ -75,7 +74,8 @@
         "noUnusedVariables": "error",
         "useIsNan": "error",
         "useValidForDirection": "error",
-        "useYield": "error"
+        "useYield": "error",
+        "useValidTypeof": "error"
       },
       "style": { "useBlockStatements": "off" },
       "suspicious": {
@@ -101,18 +101,19 @@
         "noSparseArray": "error",
         "noUnsafeNegation": "error",
         "useGetterReturn": "error",
-        "useValidTypeof": "error"
+        "noWith": "error"
       }
     },
-    "ignore": [
-      "node_modules/",
-      ".pnpm-store/",
-      "dist/",
-      "build/",
-      "out/",
-      ".next/",
-      ".turbo/",
-      "coverage/"
+    "includes": [
+      "**",
+      "!**/node_modules/",
+      "!**/.pnpm-store/",
+      "!**/dist/",
+      "!**/build/",
+      "!**/out/",
+      "!**/.next/",
+      "!**/.turbo/",
+      "!**/coverage/"
     ]
   },
   "javascript": {
@@ -133,7 +134,7 @@
   },
   "overrides": [
     {
-      "include": ["**/*.js"],
+      "includes": ["**/*.js"],
       "javascript": { "globals": ["console"] },
       "linter": {
         "rules": {
@@ -145,7 +146,7 @@
       }
     },
     {
-      "include": ["tests/**/*.ts"],
+      "includes": ["**/tests/**/*.ts"],
       "linter": {
         "rules": {
           "correctness": {

@@ -83,9 +83,17 @@
   "dependencies": {
     "reflect-metadata": "^0.2.2"
   },
-  "files": ["README.md", "dist", "src"],
+  "files": [
+    "README.md",
+    "dist",
+    "src"
+  ],
   "lint-staged": {
-    "*.{js,ts}": ["biome check --write --unsafe"],
-    "*.{json,md}": ["biome format --write"]
+    "*.{js,ts}": [
+      "biome check --write --unsafe"
+    ],
+    "*.{json,md}": [
+      "biome format --write"
+    ]
   }
 }
