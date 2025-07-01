@@ -10,7 +10,7 @@
     "web": true
   },
   "npm": {
-    "publish": false
+    "publish": true
   },
   "hooks": {
     "after:bump": "pnpm build",
